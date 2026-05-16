@@ -35,7 +35,7 @@ bash <(curl -LsSf https://raw.githubusercontent.com/liyuheng200408-pixel/real-es
 
 编辑配置文件，替换为您自己的飞书频道ID：
 ```bash
-nano ~/.hermes/cache/documents/doc_悠悠_HEARTBEAT.md
+nano /opt/hermes-agent/HEARTBEAT.md
 ```
 
 ### 4. 重启并验证
@@ -80,16 +80,16 @@ python3 ~/.hermes/scripts/delayed_reminder_悠悠.py delete 张三
 ├── scripts/
 │   ├── delayed_reminder_悠悠.py   # 延迟跟进提醒脚本
 │   └── match_houses.py            # 房源匹配脚本
-├── cache/documents/
-│   ├── doc_悠悠_HEARTBEAT.md      # 定时任务配置
-│   ├── doc_悠悠_AGENTS.md         # 销售跟单规范
-│   ├── doc_悠悠_IDENTITY.md       # 身份设定
-│   └── doc_悠悠_SOUL.md           # 人格配置
 ├── skills/domain/real-estate-sales/
 │   └── SKILL.md                   # 房产销售技能包
 ├── data/
 │   └── 悠悠房源库.db              # 房源数据库
-└── followup_data_悠悠.json        # 客户跟进数据
+├── followup_data_悠悠.json        # 客户跟进数据
+└── /opt/hermes-agent/
+    ├── HEARTBEAT.md               # 定时任务配置
+    ├── AGENTS.md                  # 销售跟单规范
+    ├── IDENTITY.md                # 身份设定
+    └── SOUL.md                    # 人格配置
 ```
 
 ## 客户分级标准
