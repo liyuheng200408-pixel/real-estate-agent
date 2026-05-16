@@ -13,7 +13,7 @@
 ## 系统要求
 
 - 已安装 Hermes Agent v0.14.0+
-- Node.js 18+
+- Node.js 22+
 - Python 3.12+
 - 飞书机器人（可选，用于消息推送）
 
