@@ -89,7 +89,9 @@ python3 ~/.hermes/scripts/delayed_reminder_悠悠.py delete 张三
     ├── HEARTBEAT.md               # 定时任务配置
     ├── AGENTS.md                  # 销售跟单规范
     ├── IDENTITY.md                # 身份设定
-    └── SOUL.md                    # 人格配置
+    ├── SOUL.md                    # 人格配置
+    ├── USER.md                    # 用户偏好
+    └── MEMORY.md                  # 记忆数据
 ```
 
 ## 客户分级标准

@@ -41,6 +41,8 @@ cp "$TARGET_DIR/configs/HEARTBEAT.md" "/opt/hermes-agent/HEARTBEAT.md"
 cp "$TARGET_DIR/configs/AGENTS.md" "/opt/hermes-agent/AGENTS.md"
 cp "$TARGET_DIR/configs/IDENTITY.md" "/opt/hermes-agent/IDENTITY.md"
 cp "$TARGET_DIR/configs/SOUL.md" "/opt/hermes-agent/SOUL.md"
+cp "$TARGET_DIR/configs/USER.md" "/opt/hermes-agent/USER.md"
+cp "$TARGET_DIR/configs/MEMORY.md" "/opt/hermes-agent/MEMORY.md"
 
 # 6. 复制技能包到 ~/.hermes/skills/domain/real-estate-sales/
 echo "复制技能包..."
