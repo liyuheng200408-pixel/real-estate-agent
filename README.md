@@ -116,3 +116,5 @@ MIT License
 Copyright (c) 2026 liyuheng200408-pixel
 
 本项目基于 [Hermes Agent](https://github.com/NousResearch/hermes-agent) 开发。
+
+悠悠房产机器人的核心配置文件（HEARTBEAT.md、AGENTS.md、IDENTITY.md、SOUL.md、USER.md、MEMORY.md）以及配套脚本（match_houses.py、delayed_reminder_悠悠.py 等）为房产机器人 AI 生成，版权归委托方（买家）所有，即本仓库所有者。
