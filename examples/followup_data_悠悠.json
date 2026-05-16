@@ -1,0 +1,30 @@
+{
+  "customers": [
+    {
+      "name": "张三",
+      "phone": "138****5678",
+      "level": "S",
+      "budget": "80-100万",
+      "area": "三亚",
+      "status": "已带看2次，意向很强",
+      "last_followup": "2026-05-15",
+      "next_followup": "2026-05-17",
+      "note": "倾向海棠湾户型"
+    },
+    {
+      "name": "李四",
+      "phone": "139****1234",
+      "level": "A",
+      "budget": "60-80万",
+      "area": "海口",
+      "status": "初次咨询，在考虑中",
+      "last_followup": "2026-05-10",
+      "next_followup": "2026-05-20",
+      "note": "首套房，预算有限"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-05-01",
+    "version": "1.0"
+  }
+}
