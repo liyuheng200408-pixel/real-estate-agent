@@ -32,8 +32,12 @@ fi
 echo "复制脚本文件..."
 cp "$TARGET_DIR/scripts/delayed_reminder_悠悠.py" "$HOME/.hermes/scripts/"
 cp "$TARGET_DIR/scripts/match_houses.py" "$HOME/.hermes/scripts/"
+cp "$TARGET_DIR/scripts/daily_report_悠悠.py" "$HOME/.hermes/scripts/"
+cp "$TARGET_DIR/scripts/monthly_report_悠悠.py" "$HOME/.hermes/scripts/"
 chmod +x "$HOME/.hermes/scripts/delayed_reminder_悠悠.py"
 chmod +x "$HOME/.hermes/scripts/match_houses.py"
+chmod +x "$HOME/.hermes/scripts/daily_report_悠悠.py"
+chmod +x "$HOME/.hermes/scripts/monthly_report_悠悠.py"
 
 # 5. 复制配置文件到 /opt/hermes-agent/（覆盖原官方配置）
 echo "复制配置文件到 /opt/hermes-agent/..."
