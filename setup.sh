@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REPO="https://gitee.com/liyuheng888/real-estate-agent.git"
+REPO="https://gitee.com/liyuheng200408/real-estate-agent.git"
 TARGET_DIR="$HOME/.hermes/real-estate-agent"
 
 echo "开始安装悠悠房产机器人..."
