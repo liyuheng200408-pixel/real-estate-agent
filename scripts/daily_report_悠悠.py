@@ -3,9 +3,13 @@
 
 import json
 import sys
+import os
+from pathlib import Path
 from datetime import datetime, timedelta
 
-DATA_FILE = "/root/.hermes/followup_data_悠悠.json"
+# 动态路径：优先读取环境变量，其次用 ~/.hermes/
+HERMES_BASE = Path(os.environ.get("HERMES_BASE_DIR", os.path.expanduser("~/.hermes")))
+DATA_FILE = HERMES_BASE / "followup_data_悠悠.json"
 
 
 def load_data():

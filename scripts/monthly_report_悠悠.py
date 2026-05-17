@@ -3,11 +3,14 @@
 
 import sqlite3
 import os
+from pathlib import Path
 from datetime import datetime
 import sys
 
-DB_PATH = "/root/.hermes/data/悠悠房源库.db"
-OUTPUT_DIR = "/root/.hermes/cron/output"
+# 动态路径：优先读取环境变量，其次用 ~/.hermes/
+HERMES_BASE = Path(os.environ.get("HERMES_BASE_DIR", os.path.expanduser("~/.hermes")))
+DB_PATH = HERMES_BASE / "data" / "悠悠房源库.db"
+OUTPUT_DIR = HERMES_BASE / "cron" / "output"
 
 
 def get_db_path():
