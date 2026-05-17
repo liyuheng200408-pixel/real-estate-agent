@@ -12,38 +12,107 @@
 
 ## 系统要求
 
-- 已安装 Hermes Agent v0.14.0+
+- Linux / macOS / WSL2 / Termux
 - Node.js 22+
-- Python 3.12+
+- Python 3.11+
 - 飞书机器人（可选，用于消息推送）
+- Git（用于克隆仓库）
+
+---
 
 ## 快速开始
 
-### 1. 安装 Hermes Agent
+### 第一步：安装 Hermes Agent
+
+**国内服务器推荐使用 GitHub 镜像或 Gitee 镜像：**
 
 ```bash
-curl -LsSf https://setup.hermesagent.ai | sh
+# 方法一：GitHub（部分服务器可能访问慢）
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+
+# 方法二：Gitee 镜像（推荐国内服务器使用）
+curl -fsSL https://gitee.com/nousresearch/hermes-agent/raw/main/scripts/install.sh | bash
+
+# 方法三：手动下载安装脚本
+# 访问 https://gitee.com/nousresearch/hermes-agent 下载 install.sh 到本地
 ```
 
-### 2. 安装悠悠房产机器人
+> 如果以上命令都失败，请在可以访问 GitHub 的机器上下载 install.sh，然后通过 U 盘或内网传到目标服务器。
+
+安装完成后加载环境变量：
 
 ```bash
-bash <(curl -LsSf https://raw.githubusercontent.com/liyuheng200408-pixel/real-estate-agent/main/setup.sh)
+source ~/.bashrc    # 或 source ~/.zshrc
 ```
 
-### 3. 配置飞书频道（可选）
+验证安装：
 
-编辑配置文件，替换为您自己的飞书频道ID：
 ```bash
-nano /opt/hermes-agent/HEARTBEAT.md
+hermes --version
 ```
 
-### 4. 重启并验证
+---
+
+### 第二步：克隆悠悠房产机器人仓库
+
+```bash
+# 方法一：Gitee（推荐国内）
+git clone https://gitee.com/liyuheng200408/real-estate-agent.git ~/.hermes/real-estate-agent
+
+# 方法二：GitHub（部分服务器可能访问慢）
+git clone https://github.com/liyuheng200408-pixel/real-estate-agent.git ~/.hermes/real-estate-agent
+```
+
+---
+
+### 第三步：运行安装脚本
+
+```bash
+bash ~/.hermes/real-estate-agent/setup.sh
+```
+
+setup.sh 会自动完成以下操作：
+
+1. 检查 Hermes Agent 是否已安装
+2. 复制4个脚本到 `~/.hermes/scripts/`（房源匹配、看房提醒、早报、月报）
+3. 复制6个配置文件到 `/opt/hermes-agent/`（覆盖官方默认配置）
+4. 复制技能包到 `~/.hermes/skills/domain/real-estate-sales/`
+5. 初始化示例数据（客户跟进表和房源库）
+
+---
+
+### 第四步：配置飞书机器人
+
+定时提醒（早报、午间检查、晚间总结等）通过飞书推送。
+
+1. 在飞书创建自定义机器人，拿到 Webhook 地址
+2. 编辑 `/opt/hermes-agent/HEARTBEAT.md`，把里面的飞书配置替换为您自己的
+3. 如果使用其他 IM 工具，修改对应 cron 任务的 prompt
+
+---
+
+### 第五步：重启并验证
 
 ```bash
 pkill -f hermes && sleep 2 && hermes run &
 hermes doctor
 ```
+
+---
+
+### 后续维护
+
+更新到最新版本：
+
+```bash
+cd ~/.hermes/real-estate-agent && git pull
+bash ~/.hermes/real-estate-agent/setup.sh
+```
+
+替换为自己的数据：
+
+- 客户跟进数据：`~/.hermes/followup_data_悠悠.json`
+- 房源数据库：`~/.hermes/data/悠悠房源库.db`
 
 ## 脚本说明
 
