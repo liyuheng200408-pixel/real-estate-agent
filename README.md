@@ -31,10 +31,11 @@
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 
 # 方法二：手动下载安装脚本（推荐网络不稳的国内服务器）
-# 1. 在能访问 GitHub 的电脑上打开：https://github.com/NousResearch/hermes-agent/tree/main/scripts
-# 2. 点击 install.sh 查看内容，全选复制
-# 3. 在服务器上创建文件：nano /root/install.sh（粘贴内容，Ctrl+O 保存，Ctrl+X 退出）
-# 4. 运行：bash /root/install.sh
+# 步骤：
+# 1. 在电脑浏览器打开以下链接并全选复制全部内容：
+https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh
+# 2. 在服务器上运行：nano /tmp/install.sh（粘贴内容，Ctrl+O 保存，Ctrl+X 退出）
+# 3. 运行：bash /tmp/install.sh
 ```
 
 > 如果以上命令都失败，请在可以访问 GitHub 的机器上下载 install.sh，然后通过 U 盘或内网传到目标服务器。
